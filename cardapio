@@ -1,0 +1,50 @@
+lanches= {1:"salada" , 2:"coxinha", 3:"pizzas",4:"Hamburguer",5:"pão de queijo"}
+bebidas={1:"suco", 2:"agua" , 3:"refrigerante", 4:"Energetico",5:"Agua com gás"}
+sobremesas={1:"bolo", 2:"brigadeiro",3:"sorvete",4:"Pudim", 5:"Churros"}
+pedido={"lanches":[] ,"bebida":[] , "sobremesas":[]}
+
+def pedido_lanche ():
+print("Cardapio de lanches:")
+for indice , itens in lanches.items():
+print(f"{indice}:{itens}")
+indice= int(input("Insira o numero do que deseja:"))
+
+if indice in lanches:
+pedido ["lanches"].append(lanches[indice])
+print(f"O seu pedidio escolhido foi:{lanches[indice]}")
+else:
+print("Indice invalido")
+
+def pedido_bebidas():
+print("Cardapio de bebidas:")
+for indice, itens in bebidas.items():
+print(f"{indice}:{itens}")
+indice = int(input("Insira o numero do que deseja:"))
+
+if indice in bebidas:
+pedido["bebidas"].append(bebidas[indice])
+print(f"O seu pedidio escolhido foi:{bebidas[indice]}")
+else:
+print("Indice invalido")
+
+def pedido_sobremesas():
+print("Cardapio de sobremesas:")
+for indice, itens in sobremesas.items():
+print(f"{indice}:{itens}")
+indice = int(input("Insira o numero do que deseja:"))
+
+if indice in sobremesas:
+pedido["sobremesas"].append(sobremesas[indice])
+print(f"O seu pedidio escolhido foi:{sobremesas[indice]}")
+else:
+print("Indice invalido")
+
+def finalizar_pedido():
+print("Comanda do pedido:")
+for itens in pedido.items():
+print(f"{itens}")
+
+while True:
+pedido_lanche()
+pedido_bebidas()
+pedido_sobremesas()
